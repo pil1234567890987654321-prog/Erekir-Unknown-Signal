@@ -1,0 +1,18 @@
+planet: erekir
+
+sector: 54
+
+difficulty: 9
+
+captureWave: 16
+
+research: {
+    parent: relay-station
+
+    objectives: [
+        {
+            type: SectorComplete
+            preset: relay-station
+        }
+    ]
+}
