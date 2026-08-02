@@ -1,0 +1,14 @@
+planet: erekir
+sector: 33
+difficulty: 7
+captureWave: 32
+
+research: {
+    parent: basin
+    objectives: [
+        {
+            type: SectorComplete
+            preset: basin
+        }
+    ]
+}
