@@ -1,0 +1,10 @@
+{
+  "name": "erekir-lost-sectors",
+  "displayName": "Erekir: Unknown Hazards",
+  "subtitle": "Bruh"
+  "author": "Retro_Seek",
+  "description": "New sectors to Erekir",
+  "main": "scripts.main",
+  "version": "2.0",
+  "minGameVersion": "159"
+}
