@@ -1,0 +1,95 @@
+type: ContinuousTurret
+name: conflagration
+
+size: 3
+health: 2680
+
+
+range: 240
+shootCone: 5
+rotateSpeed: 5
+aimChangeSpeed: 1
+shootDelay:0.5
+
+maxHeatEfficiency: 1
+shootSound:shootconfa
+loopSound:loopconfa
+shootSoundVolume:2
+loopSoundVolume:5
+
+buildTime: 2267
+shoot: {
+    knockback: 0.7
+    type: ShootBarrel
+    shots: 5
+    shotDelay: 0
+    barrels: [-2.75, 3.5, 2, 2.5, 3.5, -2]
+}
+
+category: turret
+
+requirements: [
+    tungsten/250
+    silicon/600
+    thorium/200
+    beryllium/575
+    oxide/225
+    cryxium/75
+]
+
+research: {
+  parent: scathe
+  objectives: [
+    {
+      type: Research
+      content: cryxium
+    }
+  ]
+}
+
+shootType: {
+    type: ContinuousLaserBulletType
+    damage: 50
+    length: 240
+    status: overheating
+    statusDuration: 720
+    lifetime: 90
+    reload: 300
+    buildingDamageMultiplier:0.15
+    pierceCap:3
+    width: 4
+    colors: [2d4a4000, 2d4a4066, 46908fcc, 6ab18cff, a8e0c4ff]
+    hitColor: 6ab18c
+    lightColor: a8e0c4
+}
+
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            suffix: -wing-left
+            progress: warmup
+            moveX: -2
+            moveY: -1
+            mirror: false
+        }
+        {
+            type: RegionPart
+            suffix: -wing-right
+            progress: warmup
+            moveX: 2
+            moveY: -1
+            mirror: false
+        }
+    ]
+}
+
+consumes: {
+    power: 24.2666666666666666
+    liquid: {
+        liquid: cyanogen
+        amount: 0.175
+    }
+}

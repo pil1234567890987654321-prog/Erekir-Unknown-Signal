@@ -1,0 +1,66 @@
+type: LaserTurret
+name: Resonance
+lifetime: 60
+width: 55
+size: 3
+health: 5000
+shootSound: shootCorvus
+shootSoundVolume: 1
+range: 360
+reload: 720
+shootDuration: 10
+targetAir: false
+shootWarmupSpeed: 0.083333
+linearWarmup: true
+minWarmup: 1
+rotateSpeed: 0.8
+shootX: 0
+shootY: 10
+powerUse: 10
+heatColor: ff002a
+cooldown: 0.02
+coolantMultiplier: 2.5
+consumes: {
+    liquidsBoost: [
+        water/0.75
+    ]
+}
+requirements: [
+    tungsten/250
+    silicon/275
+    surge-alloy/200
+    cryxium/280
+]
+
+category: turret
+
+shootType: {
+    type: LaserBulletType
+    damage: 2880
+    length: 360
+    buildingDamageMultiplier:0.1
+    pierceCap:3
+    colors: [
+        7a0018ff
+        ff002aff
+        ff3045ff
+        ffd0d5ff
+    ]
+}
+research: smite
+consumes: {
+    power: 25
+}
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+    parts: [
+        {
+            type: RegionPart
+            progress: warmup
+            heatProgress: warmup
+            under: true
+            suffix: -heat
+        }
+    ]
+}

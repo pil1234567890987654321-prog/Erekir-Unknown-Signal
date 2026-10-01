@@ -1,0 +1,113 @@
+type: ContinuousLiquidTurret
+name: conflagration
+size: 4
+health: 2400
+range: 260
+reload: 6
+shootCone: 15
+rotateSpeed: 3
+liquidCapacity: 30
+liquidConsumed: 0.2
+squareSprite: false
+outlineColor: "2a2c35"
+
+requirements: [
+  copper/300
+  tungsten/250
+  beryllium/300
+  oxide/150
+]
+
+ammoTypes: {
+  ozone: {
+    type: ContinuousFlameBulletType
+    damage: 60
+    length: 200
+    knockback: 1
+    status: burning
+    statusDuration: 300
+    buildingDamageMultiplier: 0.3
+    pierceCap: 2
+    colors: [eb7abe66, e189f5bb, 907ef7cc, 91a4ff, ffffff]
+  }
+
+  nitrogen: {
+    type: ContinuousFlameBulletType
+    damage: 65
+    length: 320
+    rangeChange: 78
+    knockback: 9
+    status: freezing
+    statusDuration: 900
+    buildingDamageMultiplier: 0.1
+    pierceCap: 2
+    ammoUse: 15
+    colors: [7ad7ff66, 8de8ffbb, b8f5ffcc, d9fbff, ffffff]
+    flareColor: 8de8ff
+    hitColor: b8f5ff
+    lightColor: d9fbff
+  }
+
+  arkycite: {
+    type: ContinuousFlameBulletType
+    damage: 20
+    length: 230
+    rangeChange: 22
+    knockback: 0
+    status: corroded
+    statusDuration: 960
+    buildingDamageMultiplier: 0.1
+    pierceCap: 2
+    colors: [e1c94d66, e1c94dbb, d4e05ccc, eaf28c, ffffff]
+    flareColor: eaf28c
+    hitColor: d4e05c
+    lightColor: eaf28c
+  }
+
+  hydrogen: {
+    type: ContinuousFlameBulletType
+    damage: 19
+    length: 320
+    rangeChange: 118
+    knockback: 4
+    status: burning
+    statusDuration: 900
+    buildingDamageMultiplier: 0.1
+    pierceCap: 2
+    ammoUse: 15
+    colors: [c3f6ff66, 89e5f5bb, 907ef7cc, 91a4ff, ffffff]
+    flareColor: BDEFFF
+    hitColor: 9EE7FF
+    lightColor: D8F7FF
+  }
+
+  cyanogen: {
+    type: ContinuousFlameBulletType
+    damage: 130
+    rangeChange: 70
+    length: 270
+    knockback: 2
+    pierceCap: 3
+    buildingDamageMultiplier: 0.3
+    colors: [465ab866, 66a6d2bb, 89e8b6cc, cafcbe, ffffff]
+    flareColor: 89e8b6
+    hitColor: 89e8b6
+    lightColor: 89e8b6
+  }
+
+  slag: {
+    type: ContinuousFlameBulletType
+    damage: 70
+    length: 140
+    rangeChange: -60
+    knockback: 0
+    buildingDamageMultiplier: 0.3
+    pierceCap: 2
+    colors: [ff8c0066, ff9f22bb, ffb347cc, ffcc66, ffffff]
+    status: melting
+    statusDuration: 900
+    flareColor: ff9f22
+    hitColor: ff8c00
+    lightColor: ffb347
+  }
+}

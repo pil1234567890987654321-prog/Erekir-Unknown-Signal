@@ -1,0 +1,204 @@
+type: ContinuousLiquidTurret
+name: Pyroclast
+health: 4125
+size: 4
+uiIcon: pyroclast-preview
+liquidConsumed: 0.225
+range: 165
+outlineColor: "2a2c35"
+squareSprite: false
+loopSound: shootSublimate
+loopSoundVolume:0.8
+buildTime: 990
+liquidCapacity: 51.75
+heatColor:b900ff
+ammoTypes: {
+    ozone: {
+    type: ContinuousFlameBulletType
+    damage: 60
+    length: 167
+    knockback: 1.25
+    width: 5
+    status: burning
+    statusDuration: 300
+    buildingDamageMultiplier: 0.15
+    pierceCap: 4
+    colors: [eb7abe66, e189f5bb, 907ef7cc, 91a4ff, ffffff]
+    ammoUse: 1.5
+  }
+  cyanogen: {
+    type: ContinuousFlameBulletType
+    damage: 145
+    width: 5
+    rangeChange: 72
+    length: 240
+    knockback: 2.5
+    pierceCap: 6
+    buildingDamageMultiplier: 0.15
+    colors: [465ab866, 66a6d2bb, 89e8b6cc, cafcbe, ffffff]
+    flareColor: 89e8b6
+    hitColor: 89e8b6
+    lightColor: 89e8b6
+    status: melting
+    statusDuration: 300
+  }
+  nitrogen: {
+    type: ContinuousFlameBulletType
+    damage: 65
+    width: 5
+    length: 111
+    rangeChange: -55
+    knockback: 3.3
+    buildingDamageMultiplier: 0.15
+    pierceCap: 2
+    ammoUse: 15
+    colors: [
+    7a171266
+    991f1fbb
+    c52f2fcc
+    f04a3add
+    ffc0a8
+    ]
+    flareColor: c52f2f
+    hitColor: f04a3a
+    lightColor: ffa08a
+    status: overheating
+    statusDuration: 240
+  }
+
+    hydrogen: {
+    type: ContinuousFlameBulletType
+    damage: 44
+    width: 5
+    length: 185
+    rangeChange: 20
+    knockback: 2
+    status: burning
+    statusDuration: 900
+    buildingDamageMultiplier: 0.1
+    pierceCap: 2
+    ammoUse: 15
+    colors: [c3f6ff66, 89e5f5bb, 907ef7cc, 91a4ff, ffffff]
+    flareColor: BDEFFF
+    hitColor: 9EE7FF
+    lightColor: D8F7FF
+  }
+  Br: {
+    type: ContinuousFlameBulletType
+    damage: 130
+    width: 3.5
+    rangeChange: 60
+    length: 230
+    knockback: 1.8
+    pierceCap: 5
+    buildingDamageMultiplier: 0.2
+colors: [
+    6b302466
+    9a493abb
+    c96a4ccc
+    f0a08add
+    ffe0d2
+    ]
+    flareColor: c96a4c
+    hitColor: c96a4c
+    lightColor: c96a4c
+    status: overheating
+    statusDuration: 240
+}
+
+}
+shootY: 6.5
+
+drawer: {
+    type: DrawTurret
+    basePrefix: reinforced-
+
+    parts: [
+        {
+            type: RegionPart
+            suffix: -wingileft
+
+            progress: warmup
+
+            moveY: 1.875
+            moveRot: -15
+            
+            //heatProgress: 1
+            
+        }
+
+        {
+            type: RegionPart
+            suffix: -wingiright
+
+            progress: warmup
+
+            moveY: 1.875
+            moveRot: 15
+        }
+
+        {
+            type: RegionPart
+            suffix: -wigleft
+
+            progress: warmup
+
+            moveX: -0.25
+            moveRot: 10
+        }
+
+        {
+            type: RegionPart
+            suffix: -wigright
+
+            progress: warmup
+            moveRot: -10
+            moveX: 0.25
+        }
+        {
+            type: RegionPart
+            suffix: -wingiileft
+            progress: warmup
+            moveY: 0.25
+            moveRot: -10
+        }
+
+        {
+            type: RegionPart
+            suffix: -wingiiright
+            progress: warmup
+            moveY: 0.25
+            moveRot: 10
+        }
+
+        {
+            type: RegionPart
+            suffix: -wingiiileft
+            progress: warmup
+            heatColor: 630088
+            moveRot: -8
+        }
+
+        {
+            type: RegionPart
+            suffix: -wingiiiright
+            progress: warmup
+            heatColor: 630088
+            moveRot: 8
+        }
+    ]
+}
+category: turret
+research: breach
+requirements: [
+    graphite/260
+    silicon/175
+    beryllium/130
+]
+category: turret
+research: breach
+requirements: [
+    graphite/260
+    silicon/175
+    beryllium/130
+]

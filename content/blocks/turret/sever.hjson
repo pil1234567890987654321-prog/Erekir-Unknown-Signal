@@ -1,0 +1,35 @@
+type: PointDefenseTurret
+name: Sever
+
+size: 2
+health: 1125
+range: 205
+buildTime:310
+reload: 6
+rotateSpeed: 8
+
+// Урон по вражеским снарядам
+bulletDamage: 55
+
+// Длина луча
+shootLength: 3
+
+// Угол захвата цели
+shootCone: 7.5
+
+// Цвет луча
+color: 8edfff
+
+// Потребление энергии
+consumes: {
+    power: 7.2
+}
+
+requirements: [
+    cryxium/150
+    thorium/120
+    phase-fabric/80
+]
+
+category: turret
+research: pyroclast

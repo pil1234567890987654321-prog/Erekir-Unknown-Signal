@@ -1,0 +1,79 @@
+type: ContinuousLiquidTurret
+name: Trifecta
+health: 4680
+size: 4
+liquidConsumed: 0.225
+range: 165
+outlineColor: "2a2c35"
+squareSprite: false
+loopSound: shootSublimate
+loopSoundVolume:2
+buildTime: 990
+liquidCapacity: 100
+
+ammoTypes: {
+    ozone: {
+    type: ContinuousFlameBulletType
+    damage: 20
+    length: 165
+    knockback: 1
+    width: 1
+    status: burning
+    statusDuration: 300
+    buildingDamageMultiplier: 0.1
+    pierceCap: 2
+    colors: [eb7abe66, e189f5bb, 907ef7cc, 91a4ff, ffffff]
+    ammoUse: 1.5
+  }
+  cyanogen: {
+    type: ContinuousFlameBulletType
+    damage: 42
+    length: 221
+    knockback: 2.5
+    rangeChange:56
+    width: 0.75
+    status: overheating
+    statusDuration: 480
+    buildingDamageMultiplier: 0.1
+    pierceCap: 4
+    colors: [465ab866, 66a6d2bb, 89e8b6cc, cafcbe, ffffff]
+    flareColor: 89e8b6
+    hitColor: 89e8b6
+    lightColor: 89e8b6
+    ammoUse: 3
+  }
+  nitrogen: {
+    type: ContinuousFlameBulletType
+    damage: 28
+    length: 105
+    knockback: 4.5
+    rangeChange:-65
+    width: 0.75
+    status: nitroshock
+    statusDuration: 750
+    buildingDamageMultiplier: 0.1
+    pierceCap: 6
+    colors: [7ad7ff66, 8de8ffbb, b8f5ffcc, d9fbff, ffffff]
+    flareColor: 8de8ff
+    hitColor: b8f5ff
+    lightColor: d9fbff
+    ammoUse: 3
+  }
+}
+shoot: {
+    type: ShootBarrel
+    shots:5
+    shotDelay:0
+    barrels: [-5.25, -2, 0, 5.25, -2, 0, 0, -2, 0]
+}
+drawer:{
+ type: DrawTurret
+ basePrefix: reinforced-
+}
+category: turret
+research: breach
+requirements: [
+    graphite/260
+    silicon/175
+    beryllium/130
+]
