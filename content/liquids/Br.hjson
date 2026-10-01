@@ -1,0 +1,18 @@
+type: Liquid
+name: Br
+gas: true
+color: 7f3028
+gasColor: b83b32
+barColor: a83a30
+lightColor: ff4a3d
+research: {
+    parent: nitrogen
+}
+type: cellLiquid
+boilPoint: 0.85
+explosiveness: 0
+heatCapacity: 1.0
+flammability: 0
+temperature: 0.8
+viscosity: 0.05
+hidden:false
