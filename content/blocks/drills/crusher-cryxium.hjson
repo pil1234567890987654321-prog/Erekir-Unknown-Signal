@@ -1,0 +1,35 @@
+type: WallCrafter
+name: -
+
+size: 4
+health: 550
+
+drillTime: 32
+output: sand
+
+consumes: {
+    items: [
+        graphite/1
+    ]
+
+    power: 1.5
+    liquids: [
+      Br/0.0075
+    ]
+}
+optionalBoostIntensity: 1.9375
+liquidBoostIntensity: 1.5
+
+ambientSound: loopDrill
+ambientSoundVolume: 0.15
+
+requirements: [
+    cryxium/120
+    silicon/80
+    carbide/60
+]
+
+category: production
+research: {
+    parent: large-cliff-crusher
+}
