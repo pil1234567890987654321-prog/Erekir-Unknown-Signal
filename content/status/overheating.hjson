@@ -1,0 +1,17 @@
+type: StatusEffect
+name: overheating
+
+color: ff6a32
+
+speedMultiplier: 0.8
+reloadMultiplier: 0.75
+damageMultiplier:1.35
+alwaysUnlocked: true
+show: true
+outline: false
+
+
+intervalDamageTime: 24
+intervalDamage: 40
+
+effectChance: 0.15

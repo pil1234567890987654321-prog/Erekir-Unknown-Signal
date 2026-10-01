@@ -1,0 +1,18 @@
+type: StatusEffect
+name: nitroshock
+
+color: 7ad7ff
+
+speedMultiplier: 0.4
+reloadMultiplier: 0.9
+damageMultiplier: 0.8
+
+alwaysUnlocked: true
+show: true
+outline: false
+
+
+intervalDamageTime: 1.5
+intervalDamage: 0.5
+
+effectChance: 0.2
