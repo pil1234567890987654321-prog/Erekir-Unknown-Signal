@@ -1,0 +1,19 @@
+planet: erekir
+
+sector: 15
+
+difficulty: 6
+
+captureWave: 15
+
+research: {
+    parent: peaks
+
+    objectives: [
+        {
+            type: SectorComplete
+            preset: peaks
+        }
+    ]
+}
+

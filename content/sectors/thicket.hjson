@@ -1,0 +1,20 @@
+planet: erekir
+
+sector: 61
+
+difficulty: 8
+
+captureWave: 19
+outline: false
+research: {
+    parent: crevice
+
+    objectives: [
+        {
+            type: SectorComplete
+            preset: crevice
+            research: duct-router
+        }
+    ]
+}
+

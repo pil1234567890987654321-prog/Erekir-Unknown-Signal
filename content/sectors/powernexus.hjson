@@ -1,0 +1,23 @@
+planet: erekir
+sector: 33
+difficulty: 7
+captureWave: 32
+
+research: {
+    parent: narrows
+
+    objectives: [
+        {
+            type: SectorComplete
+            preset: valleyy
+        }
+        {
+            type: SectorComplete
+            preset: narrows
+        }
+        {
+            type: Research
+            content: afflict
+        }
+    ]
+}

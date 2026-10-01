@@ -1,0 +1,13 @@
+planet: erekir
+sector: 57
+difficulty: 7
+research: {
+parent: anomaly-site
+captureWave: 40
+objectives: [
+    {
+      type: SectorComplete
+      preset: anomaly-site
+    }
+  ]
+}

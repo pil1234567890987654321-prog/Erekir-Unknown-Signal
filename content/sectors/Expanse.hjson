@@ -1,0 +1,12 @@
+planet: erekir
+sector: 20
+difficulty: 6
+research: {
+parent: basin
+objectives: [
+    {
+      type: SectorComplete
+      preset: basin
+    }
+  ]
+}

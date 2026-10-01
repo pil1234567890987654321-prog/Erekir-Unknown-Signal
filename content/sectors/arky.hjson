@@ -1,0 +1,12 @@
+planet: erekir
+sector: 66
+difficulty: 10
+research: {
+parent: powernexus
+objectives: [
+    {
+      type: SectorComplete
+      preset: siege
+    }
+  ]
+}
