@@ -1,0 +1,10 @@
+type:Item
+color:32cfff
+flammability: 0.5
+explosiveness: 2.8
+radioactivity: 0.08
+charge: 2.275
+cost:3
+research: {
+    parent: surge-alloy
+    }

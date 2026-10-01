@@ -1,0 +1,12 @@
+type: Item
+color: 5e50df
+name: Cryxium
+explosiveness: 0
+flammability: 0
+radioactivity: 0.05
+charge: 1
+cost: 2
+hiddenOnPlanets: [serpulo, tantros]
+research: {
+    parent: carbide
+    }
