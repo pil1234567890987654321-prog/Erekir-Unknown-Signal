@@ -1,0 +1,25 @@
+type: ItemBridge
+size: 1
+health: 300
+range: 16
+buildTime:60
+pulse: true
+transportTime: 1.09090909090909
+arrowPeriod: 0.9
+arrowTimeScl: 2.75
+hasPower: true
+outputsPower: false
+requirements: [
+  cryxium/12
+  phase-fabric/12
+  silicon/9
+]
+itemCapacity: 8
+category: distribution
+squareSprite: false
+research:{
+  parent:cryxium-duct
+}
+consumes: {
+  power: 0.35
+}

@@ -1,0 +1,22 @@
+type: Duct
+
+name: cryxium-duct
+
+size: 1
+health: 220
+buildTime:4.8
+speed: 3
+
+hasItems: true
+//squareSprite: false
+
+requirements: [
+    cryxium/2
+    silicon/2
+]
+
+category: distribution
+
+research: {
+    parent: duct
+}

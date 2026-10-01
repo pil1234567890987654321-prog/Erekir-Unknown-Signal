@@ -1,0 +1,18 @@
+type: PayloadConveyor
+
+name: reinforced-payload-conveyor
+
+size: 3
+health: 600
+
+requirements: [
+    tungsten/20
+    silicon/15
+    carbide/10
+]
+
+category: units
+
+moveTime: 25
+moveForce: 260
+payloadLimit: 7

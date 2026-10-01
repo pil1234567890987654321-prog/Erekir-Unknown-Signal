@@ -1,0 +1,13 @@
+type: DuctBridge
+size: 1
+health: 220
+speed: 3
+range: 5
+buildTime:47.5
+requirements: [
+    cryxium/4
+    silicon/3
+]
+category: distribution
+squareSprite: true
+research: duct-bridge
