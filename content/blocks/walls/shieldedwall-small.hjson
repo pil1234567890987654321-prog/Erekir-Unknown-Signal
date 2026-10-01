@@ -1,0 +1,25 @@
+type: ShieldWall
+shieldHealth:225
+regenSpeed:1.35
+breakCooldown:840
+buildTime:82.2
+armor:4
+chanceDeflect:8
+consumes:{
+    power:0.05
+}
+color: 5e50df
+name: Small shielded wall
+health:1040
+size:1
+conductivePower: true
+connectedPower: true
+requirements:[
+    beryllium/3
+    surge-alloy/3
+    phase-fabric/5
+]
+category:defense
+research: {
+    parent:reinforced-surge-wall-large
+    }
