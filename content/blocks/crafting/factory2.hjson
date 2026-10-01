@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: factory2
+
+size: 3
+health: 420
+squareSprite:false
+craftTime: 120
+liqudCapacity:30
+hasItems: false
+hasLiquids: true
+
+consumes: {
+    power: 4.5
+    liquids: [
+        arkycite/0.5
+        ozone/0.1
+    ]
+}
+
+outputLiquid: Br/0.15
+buildTime:365
+requirements: [
+    silicon/150
+    tungsten/60
+    oxide/40
+]
+
+category: crafting
+research: atmospheric-concentrator
+drawer: {
+  type: DrawMulti
+  drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+    {
+type: DrawLiquidTile
+drawLiquid: Br
+padding: 2
+  }
+{
+type: DrawDefault
+  }
+]
+}
+fogRadius: 5
+ambientSound: smelter
+squareSprite: false
+ambientSoundVolume: 0.5

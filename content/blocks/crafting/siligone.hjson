@@ -1,0 +1,61 @@
+type: HeatCrafter
+maxEfficiency: 2.5
+heatRequirement:6
+name: Silicon Blast Furnace
+buildTime:1500
+size: 5
+health: 980
+craftTime: 40
+itemCapacity:50
+liquidCapacity:120
+drawer: {
+  type: DrawMulti
+  drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+    {
+type: DrawLiquidTile
+drawLiquid: slag
+padding: 5
+  }
+{
+type: DrawArcSmelt
+flameRad: 2
+circleSpace: 3
+particles: 30
+particleRad: 14
+particleLen: 4
+}
+{
+type: DrawDefault
+  }
+]
+}
+fogRadius: 5
+ambientSound: loopSmelter
+squareSprite: false
+ambientSoundVolume: 1.5
+consumes: {
+    power: 10.25
+    items: {
+        items: [
+            graphite/2
+            sand/4
+        ]
+    }
+    liquid: {
+        liquid: slag
+        amount: 1.33333333
+    }
+}
+outputItem: silicon/5
+requirements: [
+    silicon/480
+    graphite/320
+    cryxium/200
+    tungsten/100
+]
+category: crafting
+research:{parent:silicon-arc-furnace}

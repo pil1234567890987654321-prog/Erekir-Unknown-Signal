@@ -1,0 +1,83 @@
+
+type: HeatCrafter
+name: factory1
+maxEfficiency: 1
+size: 3
+buildTime: 670
+health: 1250
+liqudCapacity:60
+category: crafting
+research: {
+  parent: carbide-crucible
+  objectives: [
+    {
+      type: SectorComplete
+      preset: crossroads
+    }
+  ]
+}
+heatRequirement:25
+requirements: [
+    graphite/250
+    silicon/175
+    oxide/125
+    carbide/80
+    tungsten/250
+]
+itemCapacity: 30
+craftTime: 40
+
+outputItem: cryxium/1
+
+consumes: {
+    power: 4
+    liquid: {
+        liquid: arkycite
+        amount: 1.5
+    }
+    items: {
+        items: [
+            oxide/1.5
+            graphite/2.333333333
+        ]
+    }
+}
+
+
+updateEffect: {
+    type: ParticleEffect
+    particles: 3
+    lifetime: 35
+    cone: 25
+    length: 5
+    baseLength: 1.2
+    sizeFrom: 2.5
+    sizeTo: 0.5
+    colorFrom: 6f7788
+    colorTo: 20242e
+    offsetY: 3
+}
+
+updateEffectChance: 0.18
+updateEffectSpread: 0
+
+craftEffect: {
+    type: ParticleEffect
+    particles: 8
+    lifetime: 20
+    cone: 360
+    length: 3
+    baseLength: 0.6
+    sizeFrom: 2
+    sizeTo: 0
+    colorFrom: c6eeff
+    colorTo: 6f7788
+    offsetY: 2.5
+}
+
+drawer: {
+    type: DrawDefault
+}
+research:{
+    parent:factory1
+    }
