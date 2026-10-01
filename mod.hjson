@@ -1,0 +1,44 @@
+displayName: "[[]#ff4a28]Erekir:[[]] [[]#ff8a24]Unknown[[]] [[]#ff3030]Signal[[]]"
+
+name: "erekir-lost-sectors"
+
+author: "Retro_Seek & Zyruh"
+
+description:
+    '''
+    [[]#ff3030]// SIGNAL LOG //[[]]
+
+    [[]#9b9b9b]Origin:[[]] [[]#ff0000]UNDETERMINED[[]]
+    [[]#9b9b9b]Source:[[]] [[]#ff3030]UNKNOWN[[]]
+    [[]#9b9b9b]Classification:[[]] [[]#ff8a24]UNIDENTIFIED[[]]
+
+    [[]#e0e0e0]Something has appeared beyond the known territories of Erekir.[[]]
+
+    [[]#ff8a24]New sectors have been discovered.[[]]
+    [[]#00d9ff]Unfamiliar environments have been recorded.[[]]
+    [[]#00d9ff]Unknown anomalies have been detected.[[]]
+
+    [[]#e0e0e0]Explore the forgotten regions of [[]#ff8a24]Erekir[[]],
+    uncover the secrets hidden within its uncharted sectors,
+    and follow the signal to discover what lies beyond the known frontier.[[]]
+
+    [[]#ff8a24]NEW TECHNOLOGIES DETECTED[[]]
+
+    [[]#00d9ff]• New blocks[[]]
+    [[]#00d9ff]• New turrets[[]]
+    [[]#00d9ff]• New resources and technologies[[]]
+    [[]#00d9ff]• New sectors to explore[[]]
+
+    [[]#ff3030]WARNING:[[]]
+    [[]#cfcfcf]The source remains unidentified.[[]]
+    [[]#cfcfcf]The signal is still active.[[]]
+
+    [[]#777777]Proceed with caution.[[]]
+
+
+    [[]#8a8a8a]Languages:[[]] [[]#00d9ff]English[[]], [[]#ff8a24]Russian[[]]
+    '''
+
+version: v1.0
+
+minGameVersion: 158
