@@ -2,7 +2,6 @@
 <img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/8dac4531-51cc-49b9-806e-6bc1192b32c1" />
 
 
-
 > An expansion for Mindustry's Erekir planet, focused on exploration,
 > unknown technologies, forgotten sectors, and an unidentified signal.
 
@@ -70,7 +69,7 @@ Mods menu.
 ## Requirements
 
 - **Unknown**
-- v159
+- Mindustry **v158**
 
 ## Localization
 
