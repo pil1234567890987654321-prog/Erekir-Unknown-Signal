@@ -69,8 +69,8 @@ Mods menu.
 
 ## Requirements
 
-- Mindustry
-- Erekir
+- **Unknown**
+- v159
 
 ## Localization
 
