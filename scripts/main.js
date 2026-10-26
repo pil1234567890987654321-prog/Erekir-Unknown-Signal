@@ -4,7 +4,6 @@ var introSound = Vars.tree.loadSound("intro");
 require("solace");
 require("prism");
 require("vesper");
-f
 print("🤪🤪🤪🤪🤪🤪Solace script test🤪🤪🤪🤪🤪🤪");
 var introStarted = false;
 var introFinished = false;
