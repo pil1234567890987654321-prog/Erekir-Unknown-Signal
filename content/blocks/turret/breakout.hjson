@@ -19,6 +19,7 @@ ammoTypes: {
     damage: 320
     lifetime: 100
     width: 12
+    
     height: 16
     reloadMultiplier:1.15
     // Спокойная золотистая палитра
@@ -94,6 +95,7 @@ ammoTypes: {
 }
     cryxium: {
     ammoMultiplier: 1
+    shootSound: explosionObviate
     type: BasicBulletType
     rangeChange:37
     reloadMultiplier:0.3

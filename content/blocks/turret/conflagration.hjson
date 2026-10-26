@@ -49,10 +49,10 @@ research: {
 
 shootType: {
     type: ContinuousLaserBulletType
-    damage: 50
+    damage: 35
     length: 240
     status: overheating
-    statusDuration: 720
+    statusDuration: 250
     lifetime: 90
     reload: 300
     buildingDamageMultiplier:0.15

@@ -1,5 +1,5 @@
 type: ContinuousLiquidTurret
-name: conflagration
+name: legacy-conflagration
 size: 4
 health: 2400
 range: 260
@@ -12,7 +12,7 @@ squareSprite: false
 outlineColor: "2a2c35"
 
 requirements: [
-  copper/300
+  copper/1
   tungsten/250
   beryllium/300
   oxide/150
@@ -111,3 +111,4 @@ ammoTypes: {
     lightColor: ffb347
   }
 }
+category:turret

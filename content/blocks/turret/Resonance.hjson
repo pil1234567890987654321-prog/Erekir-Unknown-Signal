@@ -3,7 +3,7 @@ name: Resonance
 lifetime: 60
 width: 55
 size: 3
-health: 5000
+health: 3880
 shootSound: shootCorvus
 shootSoundVolume: 1
 range: 360
@@ -36,7 +36,7 @@ category: turret
 
 shootType: {
     type: LaserBulletType
-    damage: 2880
+    damage: 4860
     length: 360
     buildingDamageMultiplier:0.1
     pierceCap:3

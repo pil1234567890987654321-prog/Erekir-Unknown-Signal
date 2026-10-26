@@ -1,0 +1,111 @@
+// БЛОК "Prism": матка дронов. Сама не стреляет, а выпускает дронов (spawnUnit).
+// Какой дрон вылетит, зависит от загруженного предмета: торий или оксид.
+// Лимит дронов, лидирование к цели и возврат ведёт scripts/prism.js.
+type: ItemTurret
+category: turret
+size: 3
+health: 1800
+requirements: [
+  beryllium/120
+  graphite/80
+  tungsten/50
+]
+
+targetAir: true
+targetGround: true
+// радиус, в котором матка замечает врагов и выпускает дронов (35 клеток)
+range: 280
+rotateSpeed: 5
+reload: 100
+recoil: 0
+shootCone: 360
+// выпускать дронов всегда, пока есть боеприпасы (до лимита из prism.js), даже если врагов рядом нет
+alwaysShooting: true
+// сколько "патронов" влезает; один дрон = ammoPerShot патронов
+maxAmmo: 30
+ammoPerShot: 2
+shootSound: shootMissileLarge
+
+// БОЕПРИПАСЫ: предмет -> какой дрон вылетает
+ammoTypes: {
+  thorium: {
+    type: BasicBulletType
+    speed: 0
+    lifetime: 1
+    ammoMultiplier: 1
+    collides: false
+    spawnUnit: prism-drone-thorium
+    shootEffect: {
+      type: ParticleEffect
+      particles: 8
+      line: true
+      length: 22
+      lifetime: 18
+      strokeFrom: 1.6
+      strokeTo: 0
+      lenFrom: 6
+      lenTo: 1
+      colorFrom: ffffff
+      colorTo: f9a3c7
+      lightOpacity: 0
+    }
+    smokeEffect: none
+    despawnEffect: none
+    hitEffect: none
+  }
+
+  graphite: {
+    type: BasicBulletType
+    speed: 0
+    lifetime: 1
+    ammoMultiplier: 1
+    collides: false
+
+    spawnUnit: prism-drone-graphite
+
+    shootEffect: {
+      type: ParticleEffect
+      particles: 8
+      line: true
+      length: 22
+      lifetime: 18
+      strokeFrom: 1.6
+      strokeTo: 0
+      lenFrom: 6
+      lenTo: 1
+      colorFrom: ffffff
+      colorTo: 858d9b
+      lightOpacity: 0
+    }
+
+    smokeEffect: none
+    despawnEffect: none
+    hitEffect: none
+  }
+
+  oxide: {
+    type: BasicBulletType
+    speed: 0
+    lifetime: 1
+    ammoMultiplier: 1
+    collides: false
+    spawnUnit: prism-drone-oxide
+    shootEffect: {
+      type: ParticleEffect
+      particles: 8
+      line: true
+      length: 22
+      lifetime: 18
+      strokeFrom: 1.6
+      strokeTo: 0
+      lenFrom: 6
+      lenTo: 1
+      colorFrom: ffffff
+      colorTo: 83bde6
+      lightOpacity: 0
+    }
+    smokeEffect: none
+    despawnEffect: none
+    hitEffect: none
+  }
+}
