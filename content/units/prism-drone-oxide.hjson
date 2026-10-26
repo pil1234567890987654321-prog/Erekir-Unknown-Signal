@@ -1,0 +1,99 @@
+// Дрон матки Prism (oxide). Спрайт prism-drone-oxide.png получен подкраской белого prism-drone-white.png.
+type: flying
+template: ErekirUnitType
+
+flying: true
+lowAltitude: true
+faceTarget: true
+targetAir: true
+targetGround: true
+// дроны не считаются в лимит юнитов; лимит держит scripts/prism.js
+useUnitCap: false
+outlines: true
+
+health: 300
+hitSize: 8
+armor: 3
+speed: 3.6
+
+rotateSpeed: 14
+range: 110
+maxRange: 110
+accel: 0.1
+drag: 0.15
+engineOffset: 4
+engineSize: 2.2
+playerControllable: false
+controlSelectGlobal: false
+weapons: [
+  {
+    name: prism-drone-gun-oxide
+    x: 0
+    y: 3
+    mirror: false
+    rotate: false
+
+    reload: 18
+    recoil: 0
+    shootCone: 20
+
+    bullet: {
+      type: BasicBulletType
+      speed: 4.5
+      damage: 18
+      lifetime: 25
+
+      width: 4
+      height: 7
+
+      collidesAir: true
+      collidesGround: true
+      status: corroded
+      statusDuration: 60
+      backColor: "397FAE"
+      frontColor: "83BDE6"
+      hitColor: "83BDE6"
+      trailColor: "83BDE6"
+      lightColor: "83BDE6"
+      lightOpacity: 0.6
+      lightRadius: 16
+
+      trailLength: 3
+      trailWidth: 1.8
+
+      shootEffect: none
+      smokeEffect: none
+
+      hitEffect: {
+        type: ParticleEffect
+        particles: 5
+        line: true
+        length: 14
+        lifetime: 14
+        strokeFrom: 1.4
+        strokeTo: 0
+        lenFrom: 5
+        lenTo: 1
+        colorFrom: "FFFFFF"
+        colorTo: "83BDE6"
+        lightOpacity: 0
+      }
+
+      despawnEffect: {
+        type: ParticleEffect
+        particles: 3
+        line: true
+        length: 8
+        lifetime: 9
+        strokeFrom: 1
+        strokeTo: 0
+        lenFrom: 3
+        lenTo: 1
+        colorFrom: "83BDE6"
+        colorTo: "397FAE"
+        lightOpacity: 0
+      }
+    }
+  }
+]
+

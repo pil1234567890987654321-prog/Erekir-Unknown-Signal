@@ -1,0 +1,268 @@
+type: payload
+template: ErekirUnitType
+
+flying: true
+payloadCapacity: 2304
+pickupUnits: true
+
+faceTarget: true
+singleTarget: true
+targetAir: true
+lowAltitude: false
+outlines: false
+
+shadowElevation: 0.15
+drag: 0.1
+speed: 1
+rotateSpeed: 1.5
+accel: 0.05
+
+health: 12900
+armor: 13
+hitSize: 50
+researchCostMultiplier: 3
+
+loopSound: loopHover
+loopSoundVolume: 0.8
+
+itemCapacity: 100
+
+buildSpeed: 9.45
+mineSpeed: 5.7
+mineTier: 5
+mineWalls: true
+
+engineOffset: 0
+engineSize: 0
+engines: [
+  {
+    x: -0.12
+    y: -22.5
+    radius: 6
+    rotation: -90
+  }
+  {
+    x: -11.5
+    y: -22.75
+    radius: 4.5
+    rotation: -105
+  }
+  {
+    x: 11.25
+    y: -22.75
+    radius: 4.5
+    rotation: -75
+  }
+  {
+    x: -22.0
+    y: -17.5
+    radius: 5
+    rotation: -120
+  }
+  {
+    x: 21.75
+    y: -17.5
+    radius: 5
+    rotation: -60
+  }
+  {
+    x: -30.75
+    y: -14.75
+    radius: 4.5
+    rotation: -135
+  }
+  {
+    x: 30.5
+    y: -14.75
+    radius: 4.5
+    rotation: -45
+  }
+]
+
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 100
+    max: 5250
+    regen: 2.2
+    cooldown: 2400
+    sides: 6
+  }
+  {
+  
+    type: SuppressionFieldAbility
+    reload: 900
+    range: 320
+    orbRadius: 2.5
+    orbSinScl: 5
+    x: -0.12
+    y: 7.45
+    color: 7bfba9da
+    particleColor: 34d78190
+    effectColor: 34d78190
+  }
+  {
+
+    type: SuppressionFieldAbility
+    active: false
+    orbRadius: 2.5
+    orbSinScl: 5
+    x: -8.1
+    y: 0.58
+    color: 7bfba9da
+    particleColor: 34d78190
+    effectColor: 34d78190
+  }
+  {
+
+    type: SuppressionFieldAbility
+    active: false
+    orbRadius: 2.5
+    orbSinScl: 5
+    x: 7.85
+    y: 0.58
+    color: 7bfba9da
+    particleColor: 34d78190
+    effectColor: 34d78190
+  }
+  {
+    type: EnergyFieldAbility
+    statusDuration: 300
+    maxTargets: 35
+    damage: 55
+    range: 240
+    color: d7f08b
+    reload: 72
+    healPercent: 1.5
+    sameTypeHealMult: 0.35
+    sectors: 6
+    x: -0.12
+    y: -4.2
+  }
+  {
+        type: RepairFieldAbility
+        amount: 175
+        reload: 720
+        range: 100
+    }
+]
+
+weapons: [
+  {
+    name: solace-eye
+    x: 7.95
+    y: 0.58
+    mirror: true
+    targetAir:true
+    alternate: false
+    rotate: true
+    rotateSpeed: 0.5
+    rotationLimit: 40
+    shootCone: 360
+    reload: 360
+    recoil: 0
+    continuous: true
+
+    initialShootSound: shootconfa
+
+    shootSound: beamPlasma
+    linearWarmup: true
+    shootWarmupSpeed: 0.006
+    minWarmup: 0.999
+    chargeSound: solace-charge
+    soundPitchMin: 1
+    soundPitchMax: 1
+    shoot: {
+      type: ShootPattern
+      firstShotDelay: 167
+    }
+    buildingDamageMultiplier:0.5
+    bullet: {
+      type: ContinuousLaserBulletType
+      damage: 35
+      damageInterval: 5
+      length: 320
+      buildingDamageMultiplier:0.5
+      width: 9
+      lifetime: 360
+      fadeTime: 16
+      despawnSound: solace-cool
+      despawnEffect: {
+        type: ParticleEffect
+        particles: 10
+        length: 26
+        baseLength: 2
+        lifetime: 50
+        sizeFrom: 3
+        sizeTo: 9
+        colorFrom: e8f2e0aa
+        colorTo: b8c8b000
+        useRotation: false
+        lightOpacity: 0
+        layer: 116
+      }
+      largeHit: true
+      collidesAir: true
+      healPercent: 2
+      collidesTeam: true
+      shake: 1
+      hitEffect: hitMeltdown
+      smokeEffect: none
+      shootEffect: none
+      incendChance: 0.05
+      incendSpread: 5
+      incendAmount: 1
+      colors: [6fe44d55, 6fe44daa, 98f27a, ffffff]
+    }
+  }
+  {
+    name: solace-silo
+    x: 15
+    y: 12.5
+    mirror: true
+    alternate: true
+    rotate: false
+    reload: 600
+    recoil: 0
+    shoot: {
+      type: ShootPattern
+      shots: 6
+      shotDelay: 6
+    }
+
+    shootCone: 360
+    shootSound: shootMissileLarge
+    buildingDamageMultiplier:0.4
+    bullet: {
+      shootEffect: {
+        type: ParticleEffect
+        particles: 8
+        line: true
+        buildingDamageMultiplier:0.4
+        length: 24
+        lifetime: 18
+        strokeFrom: 1.6
+        strokeTo: 0
+        lenFrom: 7
+        lenTo: 1
+        colorFrom: ffffff
+        colorTo: d7f08b
+        lightOpacity: 0
+      }
+      smokeEffect: none
+      speed: 0
+      keepVelocity: false
+      collidesAir: false
+      spawnUnit: solace-missile
+    }
+  }
+]
+range:454
+mineItems: [
+  beryllium
+  graphite
+  tungsten
+]
+research: {
+  parent: supportass
+}

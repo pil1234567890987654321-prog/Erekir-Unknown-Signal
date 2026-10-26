@@ -1,0 +1,63 @@
+// Дрон матки Prism (thorium). Спрайт prism-drone-thorium.png получен подкраской белого prism-drone-white.png.
+type: flying
+template: ErekirUnitType
+playerControllable: false
+flying: true
+lowAltitude: true
+faceTarget: true
+targetAir: true
+targetGround: true
+// дроны не считаются в лимит юнитов; лимит держит scripts/prism.js
+useUnitCap: false
+outlines: true
+playerControllable: false
+controlSelectGlobal: false
+health: 330
+hitSize: 8
+armor: 3
+speed: 3
+accel: 0.1
+drag: 0.15
+rotateSpeed: 14
+range: 120
+maxRange: 120
+
+engineOffset: 4
+engineSize: 2.2
+playerControllable: false
+weapons: [
+  {
+    name: prism-drone-gun-thorium
+    x: 0
+    y: 3
+    mirror: false
+    rotate: false
+    reload: 75
+    recoil: 0
+    shootCone: 20
+    bullet: {
+      type: LaserBulletType
+      damage: 34
+      length: 120
+      width: 7
+      lifetime: 14
+      colors: [f9a3c7aa, f9a3c7, ffffff]
+      hitColor: f9a3c7
+      shootEffect: none
+      hitEffect: {
+        type: ParticleEffect
+        particles: 5
+        line: true
+        length: 14
+        lifetime: 14
+        strokeFrom: 1.4
+        strokeTo: 0
+        lenFrom: 5
+        lenTo: 1
+        colorFrom: ffffff
+        colorTo: f9a3c7
+        lightOpacity: 0
+      }
+    }
+  }
+]

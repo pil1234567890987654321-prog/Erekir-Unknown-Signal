@@ -1,0 +1,178 @@
+
+name: Luster
+type: flying
+flying: true
+drawCell:true
+health: 980
+hitSize: 16
+armor: 8
+outlines: false
+speed: 3.25
+accel: 0.05
+drag: 0.04
+rotateSpeed: 3.5
+faceTarget: true
+targetAir: true
+range: 190
+shootSound: lustershoot
+engineOffset: 8
+engineSize: 4.5
+itemCapacity: 55
+
+parts: [
+    {
+        type: RegionPart
+        suffix: -hornl
+        mirror: false
+        outline: false
+        weaponIndex: 0
+        progress: warmup
+        layerOffset: -0.001
+
+        x: 6.5
+        y: -6
+        moveX: -2
+        moveY: 6.6
+        moveRot: 6.6
+    }
+    {
+        type: RegionPart
+        suffix: -hornr
+        mirror: false
+        outline: false
+        weaponIndex: 1
+        progress: warmup
+        layerOffset: -0.001
+
+        x: -6.5
+        y: -6
+        moveX: 2
+        moveY: 6.6
+        moveRot: -6.6
+    }
+]
+
+weapons: [
+    {
+        x: 0
+        y: 6
+        mirror: false
+        alternate: false
+        rotate: false
+        baseRotation: 0
+
+        linearWarmup: true
+        shootWarmupSpeed: 0.0333
+        minWarmup: 0.99
+        shootStatus: slow
+        shootStatusDuration: 360
+        reload: 240
+        continuous: true
+        shootCone: 180
+        shootSound: lustershoot
+        chargeSound: lustershoot
+
+        shoot: {
+            firstShotDelay: 45
+        }
+
+        bullet: {
+            type: ContinuousLaserBulletType
+            damage: 15
+            reload: 240
+            healPercent: 1
+            length: 200
+            buildingDamageMultiplier: 0.5
+            lifetime: 240
+            width: 7
+            drawSize: 420
+            shake: 1
+            hitEffect: hitMeltdown
+            despawnEffect: none
+            smokeEffect: none
+            shootEffect: none
+            incendChance: 0.05
+            incendSpread: 5
+            incendAmount: 1
+            colors: ["6fe44d55", "6fe44daa", "98f27a", "ffffff"]
+        }
+    }
+    {
+        x: 0
+        y: 6
+        mirror: false
+        alternate: false
+        rotate: false
+        baseRotation: 0
+
+        linearWarmup: true
+        shootWarmupSpeed: 0.0333
+        minWarmup: 0.99
+        shootStatus: slow
+        shootStatusDuration: 360
+        reload: 240
+        continuous: true
+        shootCone: 180
+        shootSound: lustershoot
+        chargeSound: lustershoot
+
+        shoot: {
+            firstShotDelay: 45
+        }
+
+        bullet: {
+            type: ContinuousLaserBulletType
+            damage: 15
+            reload: 240
+            healPercent: 1
+            length: 200
+            buildingDamageMultiplier: 0.5
+            lifetime: 240
+            width: 7
+            drawSize: 420
+            shake: 1
+            hitEffect: hitMeltdown
+            despawnEffect: none
+            smokeEffect: none
+            shootEffect: none
+            incendChance: 0.05
+            incendSpread: 5
+            incendAmount: 1
+            colors: ["6fe44d55", "6fe44daa", "98f27a", "ffffff"]
+        }
+    }
+]
+
+abilities: [
+    {
+        type: ForceFieldAbility
+        radius: 75
+        max: 650
+        regen: 0.3
+        cooldown: 1000
+        sides: 6
+    }
+    {
+        type: ShieldRegenFieldAbility
+        amount: 25
+        max: 225
+        reload: 125
+        range: 75
+    }
+]
+
+mineFloor: true
+mineWalls: true
+mineHardnessScaling: false
+mineSpeed: 2
+mineTier: 3
+
+mineItems: [
+    beryllium
+    graphite
+    tungsten
+]
+research:{parent:prime-refabricator}
+buildSpeed: 0.6
+planet:erekir
+template: ErekirUnitType

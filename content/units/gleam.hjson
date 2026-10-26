@@ -1,0 +1,304 @@
+name: Gleam
+template: ErekirUnitType
+type: flying
+flying: true
+
+health: 500
+hitSize: 10.5
+armor: 3
+
+mineFloor: true
+mineWalls: true
+mineHardnessScaling: false
+mineSpeed: 1.5
+mineTier: 3
+buildSpeed: 0.35
+speed: 4.5
+targetAir: true
+accel: 0.075
+drag: 0.05
+
+outlines: false
+
+fogRadius: 20
+lightRadius: 200
+
+engineOffset: 5.25
+engineSize: 3.75
+
+research: supportrefabr
+itemCapacity: 40
+
+abilities: [
+    {
+        type: ForceFieldAbility
+        radius: 68
+        max: 450
+        regen: 0.4
+        cooldown: 1200
+        sides: 6
+    }
+    {
+        type: RepairFieldAbility
+        amount: 17
+        reload: 300
+        range: 75
+    }
+]
+
+weapons: [
+    {
+        name: gleam-weaponr
+        x: 0
+        y: 0
+        reload: 120
+        mirror: false
+        alternate: false
+        rotate: false
+        recoil: 1.5
+        inaccuracy: 15
+        shootX: 3
+        buildingDamageMultiplier:0.1
+        shoot: {
+            shots: 3
+            shotDelay: 8
+            firstShotDelay: 0
+        }
+        bullet: {
+            type: BasicBulletType
+            sprite: circle-bullet
+            speed: 5
+            lifetime: 45
+            damage: 12
+            width: 3
+            height: 5
+            shrinkY: 0
+            shrinkX: 0
+            buildingDamageMultiplier:0.1
+            frontColor: ffffff
+            backColor: d8ffaa
+            hitColor: d8ffaa
+            lightColor: 7dff52
+            lightRadius: 5
+            lightOpacity: 0.15
+
+            homingPower: 0.08
+            homingRange: 80
+            weaveScale: 6
+            weaveMag: 2
+            healPercent: 2
+            collidesTeam: true
+
+            trailColor: b8ff82
+            trailLength: 8
+            trailWidth: 1.6
+
+            trailInterval: 2
+            trailEffect: {
+                type: ParticleEffect
+                particles: 1
+                length: 5
+                baseLength: 0
+                lifetime: 26
+                sizeFrom: 1.6
+                sizeTo: 0
+                colorFrom: e6ffbf
+                colorTo: 5fe040
+                useRotation: false
+                lightOpacity: 0
+            }
+
+            shootEffect: {
+                type: ParticleEffect
+                particles: 2
+                line: true
+                length: 14
+                lifetime: 12
+                strokeFrom: 1.4
+                strokeTo: 0
+                lenFrom: 5
+                lenTo: 1
+                cone: 25
+                colorFrom: ffffff
+                colorTo: 7dff52
+                lightOpacity: 0
+            }
+            smokeEffect: none
+
+            hitEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        type: ParticleEffect
+                        particles: 7
+                        line: true
+                        length: 30
+                        baseLength: 2
+                        lifetime: 22
+                        strokeFrom: 1.6
+                        strokeTo: 0
+                        lenFrom: 7
+                        lenTo: 1
+                        colorFrom: ffffff
+                        colorTo: 7dff52
+                        useRotation: false
+                        lightOpacity: 0
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 5
+                        length: 20
+                        lifetime: 28
+                        sizeFrom: 2
+                        sizeTo: 0
+                        colorFrom: e6ffbf
+                        colorTo: 5fe040
+                        useRotation: false
+                        lightOpacity: 0
+                    }
+                ]
+            }
+            despawnEffect: none
+
+            bulletInterval: 30
+            intervalBullets: 1
+            intervalBullet: {
+                buildingDamageMultiplier:0
+                type: LightningBulletType
+                damage: 6
+                healPercent: 25
+                lightningLength: 8
+                lightningLengthRand: 4
+                lightningColor: e6ffb8
+                collidesAir: true
+            }
+        }
+    }
+    {
+        name: gleam-weaponl
+        x: 0
+        y: 0
+        reload: 120
+        mirror: false
+        alternate: false
+        rotate: false
+        recoil: 1.5
+        inaccuracy: 15
+        shootX: -3
+        buildingDamageMultiplier:0.1
+        shoot: {
+            shots: 3
+            shotDelay: 8
+            firstShotDelay: 4
+        }
+        bullet: {
+            type: BasicBulletType
+            sprite: circle-bullet
+            speed: 5
+            lifetime: 45
+            damage: 12
+            width: 3
+            height: 5
+            shrinkY: 0
+            shrinkX: 0
+
+            frontColor: ffffff
+            backColor: d8ffaa
+            hitColor: d8ffaa
+            lightColor: 7dff52
+            lightRadius: 5
+            lightOpacity: 0.15
+
+            homingPower: 0.08
+            homingRange: 80
+            weaveScale: 6
+            weaveMag: 2
+            healPercent: 2
+            collidesTeam: true
+
+            trailColor: b8ff82
+            trailLength: 8
+            trailWidth: 1.6
+
+            trailInterval: 2
+            trailEffect: {
+                type: ParticleEffect
+                particles: 1
+                length: 5
+                baseLength: 0
+                lifetime: 26
+                sizeFrom: 1.6
+                sizeTo: 0
+                colorFrom: e6ffbf
+                colorTo: 5fe040
+                useRotation: false
+                lightOpacity: 0
+            }
+
+            shootEffect: {
+                type: ParticleEffect
+                particles: 2
+                line: true
+                length: 14
+                lifetime: 12
+                strokeFrom: 1.4
+                strokeTo: 0
+                lenFrom: 5
+                lenTo: 1
+                cone: 25
+                colorFrom: ffffff
+                colorTo: 7dff52
+                lightOpacity: 0
+            }
+            smokeEffect: none
+
+            hitEffect: {
+                type: MultiEffect
+                effects: [
+                    {
+                        type: ParticleEffect
+                        particles: 7
+                        line: true
+                        length: 30
+                        baseLength: 2
+                        lifetime: 22
+                        strokeFrom: 1.6
+                        strokeTo: 0
+                        lenFrom: 7
+                        lenTo: 1
+                        colorFrom: ffffff
+                        colorTo: 7dff52
+                        useRotation: false
+                        lightOpacity: 0
+                    }
+                    {
+                        type: ParticleEffect
+                        particles: 5
+                        length: 20
+                        lifetime: 28
+                        sizeFrom: 2
+                        sizeTo: 0
+                        colorFrom: e6ffbf
+                        colorTo: 5fe040
+                        useRotation: false
+                        lightOpacity: 0
+                    }
+                ]
+            }
+            despawnEffect: none
+
+            bulletInterval: 30
+            intervalBullets: 1
+            intervalBullet: {
+                type: LightningBulletType
+                damage: 7
+                buildingDamageMultiplier:0
+                healPercent: 25
+                lightningLength: 8
+                lightningLengthRand: 4
+                lightningColor: e6ffb8
+                collidesAir: true
+            }
+        }
+    }
+]

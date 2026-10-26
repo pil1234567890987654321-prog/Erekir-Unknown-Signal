@@ -1,0 +1,47 @@
+name: Glint
+template: ErekirUnitType
+type: flying
+flying: true
+outline:false
+health: 225
+hitSize: 10.5
+armor: 3
+mineFloor: true
+mineWalls: true
+mineHardnessScaling: false
+mineSpeed: 0.9
+mineTier: 3
+buildSpeed: 0.12
+speed: 4.5
+targetAir: true
+accel: 0.075
+drag: 0.05
+
+outlines: false
+
+fogRadius: 20
+lightRadius: 200
+
+engineOffset: 5
+engineSize: 3.25
+
+
+outline: false
+research: supportfabr
+itemCapacity:25
+abilities: [
+    {
+        type: ForceFieldAbility
+        radius: 60
+        max: 370
+        regen: 0.3
+        cooldown: 900
+        sides: 6
+    }
+    {
+        type: RepairFieldAbility
+        amount: 12
+        reload: 330
+        range: 60
+    }
+]

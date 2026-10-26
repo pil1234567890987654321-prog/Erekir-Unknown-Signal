@@ -1,0 +1,293 @@
+
+type: payload
+template: ErekirUnitType
+
+flying: true
+payloadCapacity: 3600
+pickupUnits: true
+
+faceTarget: true
+
+singleTarget: true
+targetAir: true
+lowAltitude: false
+
+outlines: false
+drawBody: false
+drawCell: true
+drawItems: true
+drawBuildBeam: false
+
+shadowElevation: 0.2
+drag: 0.1
+speed: 0.8
+rotateSpeed: 1.0
+accel: 0.04
+
+health: 32767
+armor: 18
+hitSize: 102
+researchCostMultiplier: 4
+
+loopSound: loopHover
+loopSoundVolume: 0.9
+
+itemCapacity: 150
+
+buildSpeed: 25
+mineSpeed: 15.5
+mineTier: 6
+mineWalls: true
+mineItems: [
+  beryllium
+  graphite
+  tungsten
+]
+
+engineOffset: 0
+engineSize: 0
+engineLayer: 114.998
+engines: [
+  {
+    x: -0.12
+    y: -42
+    radius: 7
+    rotation: -90
+  }
+  {
+    x: -13.2
+    y: -38.7
+    radius: 5
+    rotation: -90
+  }
+  {
+    x: 13.2
+    y: -38.7
+    radius: 5
+    rotation: -90
+  }
+]
+mineRange: 160
+mineBeamOffset: 32
+parts: [
+  {
+    type: RegionPart
+    suffix: -main
+    outline: false
+    layerOffset: -0.001
+  }
+  {
+    type: RegionPart
+    suffix: -wingbig-left
+    outline: false
+    layerOffset: -0.01
+    moveX: -3
+    moveRot: 0
+  }
+  {
+    type: RegionPart
+    suffix: -wingbig-right
+    outline: false
+    layerOffset: -0.01
+    moveX: 3
+    moveRot: 0
+  }
+  {
+    type: RegionPart
+    suffix: -wingsmall-left
+    outline: false
+    layerOffset: 0.01
+    moveY: 3
+  }
+  {
+    type: RegionPart
+    suffix: -wingsmall-right
+    outline: false
+    layerOffset: 0.01
+    moveY: 3
+  }
+]
+
+weapons: [
+  {
+    name: vesper-emitter
+    x: 37.8
+    y: 38
+    mirror: true
+    alternate: false
+    rotate: true
+    rotateSpeed: 1.2
+    rotationLimit: 25
+    shootCone: 360
+    reload: 30
+    recoil: 0
+    alwaysContinuous: true
+    shootSound: beamPlasma
+    initialShootSound: shootconfa
+    linearWarmup: true
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.999
+    bullet: {
+      type: ContinuousLaserBulletType
+      damage: 102.4
+      damageInterval: 3
+      length: 380
+      width: 12
+      lifetime: 20
+      fadeTime: 16
+      largeHit: true
+      collidesAir: true
+      shake: 1
+      hitEffect: hitMeltdown
+      despawnEffect: none
+      smokeEffect: none
+      shootEffect: none
+      incendChance: 0
+      status: overheating
+      statusDuration: 180
+      buildingDamageMultiplier: 0.85
+      colors: [34d78155, 34d781aa, 7bfba9, ffffff]
+    }
+  }
+  {
+  name: vesper-arc
+  x: -0.12
+  y: 1.5
+
+  mirror: false
+  rotate: false
+  controllable: false
+  autoTarget: true
+  alwaysShooting: false
+
+  reload: 210
+  recoil: 0
+  shootCone: 360
+  shootSound: none
+
+  bullet: {
+    type: BasicBulletType
+    speed: 0
+    lifetime: 1
+
+    rangeOverride: 280
+
+    collides: false
+    collidesAir: true
+    collidesGround: true
+    damage: 0
+
+    shootEffect: none
+    smokeEffect: none
+    despawnEffect: none
+    hitEffect: none
+    status: ew-jam-heavy
+    statusDuration: 180    
+    lightning:26
+    lightningLength: 36
+    lightningLengthRand: 8
+    lightningDamage: 32
+    lightningCone: 360
+    lightningAngle: 0
+    lightningColor: 7bfba9
+
+    lightningType: {
+      type: BulletType
+      damage:36
+      lifetime: 10
+      collidesAir: true
+      collidesGround: true
+      hittable: false
+      status: ew-jam-heavy
+      statusDuration: 180
+      hitEffect: hitLancer
+      despawnEffect: none
+      buildingDamageMultiplier: 0.25
+    }
+  }
+}
+]
+range: 380
+abilities: [
+  {
+    type: EnergyFieldAbility
+    statusDuration: 300
+    maxTargets: 35
+    damage: 64
+    range: 345
+    color: d7f08b
+    reload: 40
+    healPercent: 1.5
+    sameTypeHealMult: 0.512
+    status: ew-jam
+    statusDuration: 180
+    sectors: 6
+    x: -0.12
+    y: 1.5
+  }
+  {
+    type: EnergyFieldAbility
+    statusDuration: 300
+    maxTargets: 32
+    damage: 64
+    range: 355
+    color: d7f08b
+    reload: 40
+    status: ew-jam
+    statusDuration: 180
+    sectors: 6
+    x: -0.12
+    y: 1.5
+  }
+  {
+    type: ForceFieldAbility
+    radius: 200
+    max: 16384
+    regen: 5
+    cooldown: 1110
+    sides: 6
+  }
+  {
+    type: EnergyFieldAbility
+    reload: 40
+    range: 350
+    damage: 32
+    maxTargets: 64
+    hitBuildings: false
+    status: ew-jam-heavy
+    statusDuration: 240
+    healPercent: 0
+    displayHeal: true
+    color: 6fe44d
+    sectors: 8
+    rotateSpeed: 0.8
+    effectRadius: 5
+    x: -0.12
+    y: 1.5
+  }
+  {
+    type: SuppressionFieldAbility
+    active: false
+    orbRadius: 3
+    orbSinScl: 5
+    x: -37.8
+    y: 38
+    color: 7bfba9da
+    particleColor: 34d78190
+    effectColor: 34d78190
+  }
+  {
+    type: SuppressionFieldAbility
+    active: false
+    orbRadius: 3
+    orbSinScl: 5
+    x: 37.8
+    y: 38
+    color: 7bfba9da
+    particleColor: 34d78190
+    effectColor: 34d78190
+  }
+]
+research: {
+  parent: solace
+}

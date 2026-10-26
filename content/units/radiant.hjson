@@ -1,0 +1,85 @@
+
+type: payload
+flying: true
+payloadCapacity: 1024
+pickupUnits: true
+faceTarget: true
+targetAir: false
+lowAltitude: false
+template:ErekirUnitType
+outlines:false
+shadowElevation: 0.15
+drag: 0.07
+speed: 0.85
+rotateSpeed: 1.7
+accel: 0.1
+mineWalls:true
+health: 8100
+armor: 9
+hitSize: 25
+researchCostMultiplier: 3
+
+loopSound: loopHover
+loopSoundVolume: 0.8
+
+itemCapacity: 120
+
+// Строительство и добыча
+buildSpeed: 2.5
+mineSpeed: 4
+mineTier: 4
+
+// Двигатели
+engineOffset: 0
+engineSize: 0
+engines: [
+  {
+    x: 0
+    y: -12
+    radius: 4.5
+    rotation: -90
+  }
+  {
+    x: -8
+    y: -11
+    radius: 3
+    rotation: -135
+  }
+  {
+    x: 8
+    y: -11
+    radius: 3
+    rotation: -45
+  }
+]
+
+
+abilities: [
+  {
+    type: StatusFieldAbility
+    effect: fast
+    duration: 360
+    reload: 660
+    range: 48
+    activeEffect: overdriveWave
+  }
+  {
+        type: ForceFieldAbility
+        radius: 88
+        max: 1500
+        regen: 1.25
+        cooldown: 1000
+        sides: 6
+    }
+{
+    type: SuppressionFieldAbility
+    reload: 900
+    range: 40
+    orbRadius: 2.5
+    orbSinScl: 5
+    y: 0.5
+    color: d7f08bda
+    particleColor: 92b25890
+    effectColor: 92b25890
+  }
+]
