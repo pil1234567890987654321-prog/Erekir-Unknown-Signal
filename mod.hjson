@@ -39,6 +39,6 @@ description:
     [[]#8a8a8a]Languages:[[]] [[]#00d9ff]English[[]], [[]#ff8a24]Russian[[]]
     '''
 
-version: v1.0
+version: v1.1
 
-minGameVersion: 158
+minGameVersion: 160
