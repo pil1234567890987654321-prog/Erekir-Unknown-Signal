@@ -1,0 +1,30 @@
+size: 3
+type: Reconstructor
+configurable: false
+constructTime: 2400
+category: units
+regionSuffix: -dark
+  consumes: {
+    power: 2
+items: {
+    items: [
+      silicon/60
+      oxide/25
+    ]
+liquids: [
+  ozone/0.05
+]
+}
+  }
+upgrades: [
+[
+glint,
+  gleam
+]
+]
+requirements: [
+  tungsten/150
+  oxide/60
+  silicon/250
+]
+research: supportfabr

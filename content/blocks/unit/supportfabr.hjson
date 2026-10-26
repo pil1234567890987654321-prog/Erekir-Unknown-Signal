@@ -1,0 +1,38 @@
+
+size: 3
+type: unitFactory
+configurable: false
+regionSuffix: -dark
+  consumes: {
+    power: 2.15
+    liquid: {
+        liquid: water
+        amount: 0.05
+    }
+  }
+plans: [
+{
+unit: glint
+  requirements: [
+    silicon/85
+    tungsten/60
+  ]
+  
+time: 3300
+}
+]
+research: {
+  parent: tank-fabricator
+    objectives: [
+      {
+      type: OnSector
+      preset: ArkyWar
+      }
+                ]
+        }
+category: units
+requirements: [
+    beryllium/200
+    silicon/200
+    graphite/100
+  ]

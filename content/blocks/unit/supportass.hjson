@@ -1,0 +1,55 @@
+type: UnitAssembler
+size: 5
+areaSize: 21
+regionSuffix: -dark
+consumes: {
+  power: 10
+  liquids: [
+    cyanogen/0.15
+  ]
+}
+
+plans: [
+  {
+    type: UnitAssemblerPlan
+    unit: solace
+    time: 12000
+    requirements: [
+      erekir-lost-sectors-gleam/4
+      avert/3
+      carbide-wall-large/20
+    ]
+  }
+  {
+    type: UnitAssemblerPlan
+    unit: vesper
+    time: 33000
+    requirements: [
+      erekir-lost-sectors-luster/5
+      tecta/2
+      disrupt/1
+      obviate/5
+      erekir-lost-sectors-cryxium-wall/12
+      shielded-wall/8
+      erekir-lost-sectors-conflagration/1
+    ]
+  }
+]
+
+requirements: [
+  graphite/500
+  silicon/400
+  tungsten/250
+  carbide/80
+]
+
+category: units
+research: {
+  parent: ship-assembler
+  objectives: [
+    {
+      type: OnSector
+      preset: crossroads
+    }
+  ]
+}

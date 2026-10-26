@@ -1,0 +1,28 @@
+type: RepairTower
+
+name: Unit maintanance station
+
+size: 3
+health: 385
+healAmount: 4.25
+
+repairSpeed: 25000
+range: 150
+buildTime:400
+consumes: {
+    power: 7.25
+    liquid: ozone/0.07
+}
+heatColor:00ff00
+liquidCapacity: 20
+
+requirements: [
+    cryxium/80
+    silicon/50
+    oxide/30
+]
+squareSprite:false
+category: units
+research: {
+    parent: unit-repair-tower
+}
