@@ -1,0 +1,13 @@
+planet: erekir
+sector: 78
+difficulty: 3
+research: {
+parent: intersect
+objectives: [
+    {
+      type: SectorComplete
+      preset: intersect
+    }
+  ]
+}
+captureWave: 9
