@@ -1,0 +1,21 @@
+// Помеха РЭБ (jam-weak): вторичные дуги, ослабленная версия
+color: 6fe44d
+speedMultiplier: 0.85
+effect: {
+  type: ParticleEffect
+  particles: 2
+  line: true
+  length: 12
+  lifetime: 16
+  strokeFrom: 1.2
+  strokeTo: 0
+  lenFrom: 5
+  lenTo: 1
+  colorFrom: ffffff
+  colorTo: 6fe44d
+  useRotation: false
+  lightOpacity: 0
+}
+effectChance: 0.06
+outline:false
+show: true

@@ -1,17 +1,54 @@
-type: StatusEffect
-name: overheating
-
-color: ff6a32
-
-speedMultiplier: 0.8
-reloadMultiplier: 0.75
-damageMultiplier:1.35
+// Статус "Перегрев": вешается на Solace сразу после того, как лазер погас (см. scripts/main.js)
+color: ff9a5a
+// штрафы как у sapped: медленнее и хрупче
+speedMultiplier: 0.4
+healthMultiplier: 0.75
+reloadMultiplier: 0.6
+damageMultiplier:0.8
 alwaysUnlocked: true
 show: true
-outline: false
 
+// Пар вокруг юнита, пока статус висит
+effect: {
+  type: ParticleEffect
+  particles: 2
+  length: 14
+  baseLength: 0
+  lifetime: 70
+  sizeFrom: 3
+  sizeTo: 8
+  colorFrom: e8f2e0aa
+  colorTo: b8c8b000
+  useRotation: false
+  lightOpacity: 0
+  // выше слоя летающих юнитов, иначе пар прячется под корпусом
+  layer: 116
+}
+effectChance: 0.35
 
-intervalDamageTime: 24
-intervalDamage: 40
+// Большой выброс пара один раз, когда статус наложился
+applyEffect: {
+  type: ParticleEffect
+  particles: 24
+  length: 40
+  baseLength: 4
+  lifetime: 60
+  sizeFrom: 4
+  sizeTo: 12
+  colorFrom: f2f8eccc
+  colorTo: b8c8b000
+  useRotation: false
+  lightOpacity: 0
+  // выше слоя летающих юнитов, иначе пар прячется под корпусом
+  layer: 116
+}
 
-effectChance: 0.15
+intervalDamageTime: 55
+intervalDamage: 102
+transitionDamage: 68
+affinities: [
+  electrified
+  melting
+  ew-jam
+  ew-jam-heavy
+]

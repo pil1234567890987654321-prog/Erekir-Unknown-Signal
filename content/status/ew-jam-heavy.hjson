@@ -1,0 +1,25 @@
+
+color: 6fe44d
+speedMultiplier: 0.3
+reloadMultiplier: 0.6
+damageInterval:0.95
+healthMultiplier: 0.85
+effect: {
+  type: ParticleEffect
+  particles: 4
+  line: true
+  length: 12
+  lifetime: 16
+  strokeFrom: 1.2
+  strokeTo: 0
+  lenFrom: 5
+  lenTo: 1
+  colorFrom: ffffff
+  colorTo: 4A000B
+  useRotation: false
+  lightOpacity: 0
+}
+effectChance: 0.35
+outline:false
+alwaysUnlocked: true
+show: true
