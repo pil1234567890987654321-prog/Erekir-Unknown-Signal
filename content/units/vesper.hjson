@@ -1,4 +1,3 @@
-
 type: payload
 template: ErekirUnitType
 
@@ -7,7 +6,14 @@ payloadCapacity: 3600
 pickupUnits: true
 
 faceTarget: true
-
+immunities: [
+    burning,
+    shocked,
+    slow,
+    electrified,
+    ew-jam-weak,
+    ew-jam
+]
 singleTarget: true
 targetAir: true
 lowAltitude: false
@@ -24,15 +30,12 @@ speed: 0.8
 rotateSpeed: 1.0
 accel: 0.04
 
-health: 32767
-armor: 18
+health: 32000
+armor: 22
 hitSize: 102
-researchCostMultiplier: 4
+researchCostMultiplier: 4.5
 
-loopSound: loopHover
-loopSoundVolume: 0.9
-
-itemCapacity: 150
+itemCapacity: 250
 
 buildSpeed: 25
 mineSpeed: 15.5
@@ -46,7 +49,7 @@ mineItems: [
 
 engineOffset: 0
 engineSize: 0
-engineLayer: 114.998
+engineLayer: 114
 engines: [
   {
     x: -0.12
@@ -67,8 +70,10 @@ engines: [
     rotation: -90
   }
 ]
+
 mineRange: 160
 mineBeamOffset: 32
+
 parts: [
   {
     type: RegionPart
@@ -122,22 +127,24 @@ weapons: [
     reload: 30
     recoil: 0
     alwaysContinuous: true
-    shootSound: beamPlasma
+    shootSound: beamMeltdown
+    shootSoundVolume: 2
     initialShootSound: shootconfa
     linearWarmup: true
     shootWarmupSpeed: 0.02
     minWarmup: 0.999
     bullet: {
       type: ContinuousLaserBulletType
-      damage: 102.4
+      damage: 51.2
       damageInterval: 3
-      length: 380
-      width: 12
+      length: 430
+      width: 14
       lifetime: 20
       fadeTime: 16
       largeHit: true
       collidesAir: true
-      shake: 1
+      pierceArmor: true
+      shake: 2.2
       hitEffect: hitMeltdown
       despawnEffect: none
       smokeEffect: none
@@ -150,76 +157,301 @@ weapons: [
     }
   }
   {
-  name: vesper-arc
-  x: -0.12
-  y: 1.5
-
-  mirror: false
-  rotate: false
-  controllable: false
-  autoTarget: true
-  alwaysShooting: false
-
-  reload: 210
-  recoil: 0
-  shootCone: 360
-  shootSound: none
-
-  bullet: {
-    type: BasicBulletType
-    speed: 0
-    lifetime: 1
-
-    rangeOverride: 280
-
-    collides: false
-    collidesAir: true
-    collidesGround: true
-    damage: 0
-
-    shootEffect: none
-    smokeEffect: none
-    despawnEffect: none
-    hitEffect: none
-    status: ew-jam-heavy
-    statusDuration: 180    
-    lightning:26
-    lightningLength: 36
-    lightningLengthRand: 8
-    lightningDamage: 32
-    lightningCone: 360
-    lightningAngle: 0
-    lightningColor: 7bfba9
-
-    lightningType: {
-      type: BulletType
-      damage:36
-      lifetime: 10
+    name: vesper-arc
+    x: -0.12
+    y: 1.5
+    mirror: false
+    rotate: false
+    controllable: false
+    autoTarget: true
+    alwaysShooting: false
+    reload: 150
+    recoil: 0
+    shootCone: 360
+    shootSound: none
+    bullet: {
+      type: BasicBulletType
+      speed: 0
+      lifetime: 1
+      rangeOverride: 280
+      collides: false
       collidesAir: true
       collidesGround: true
-      hittable: false
+      damage: 0
+      shootEffect: none
+      smokeEffect: none
+      despawnEffect: none
+      hitEffect: none
       status: ew-jam-heavy
       statusDuration: 180
-      hitEffect: hitLancer
-      despawnEffect: none
-      buildingDamageMultiplier: 0.25
+      lightning: 30
+      lightningLength: 40
+      lightningLengthRand: 10
+      lightningDamage: 55
+      lightningCone: 360
+      lightningAngle: 0
+      lightningColor: 7bfba9
+      lightningType: {
+        type: BulletType
+        damage: 25
+        lifetime: 10
+        collidesAir: true
+        collidesGround: true
+        hittable: false
+        pierceArmor: true
+        status: ew-jam-heavy
+        statusDuration: 180
+        hitEffect: hitLancer
+        despawnEffect: none
+        buildingDamageMultiplier: 0.25
+      }
     }
   }
-}
+  {
+    name: vesper-lance
+    x: -0.12
+    y: 14
+    mirror: false
+    alternate: false
+    rotate: true
+    rotateSpeed: 2.5
+    rotationLimit: 0
+    shootCone: 1
+    reload: 300
+    recoil: 0
+    status:unmoving
+    statusDuration:150
+    chargeSound: chargeCorvus
+    shootSound: shootCorvus
+    shootSoundVolume: 2
+    shoot: {
+      type: ShootPattern
+      firstShotDelay: 100
+    }
+    bullet: {
+      type: LaserBulletType
+      damage: 750
+      length: 520
+      width: 40
+      lifetime: 90
+      collidesAir: true
+      largeHit: true
+      pierceArmor: true
+      status: ew-jam-heavy
+      statusDuration: 240
+      buildingDamageMultiplier: 0.75
+      hitEffect: hitLancer
+      shootEffect: none
+      smokeEffect: none
+
+      lightningSpacing: 32
+      lightningLength: 15
+      lightningDamage: 75
+      lightningColor: 7bfba9
+      colors: [34d78155, 7bfba9, ffffff]
+      chargeEffect: {
+        type: WaveEffect
+        sizeFrom: 40
+        sizeTo: 4
+        strokeFrom: 0
+        strokeTo: 3
+        lifetime: 25
+        colorFrom: 7bfba900
+        colorTo: ffffff
+        lightOpacity: 0
+      }
+    }
+  }
+  {
+    name: vesper-missile
+    x: 21
+    y: 51.4
+    mirror: true
+    alternate: true
+    rotate: false
+    reload: 90
+    recoil: 0
+    shootCone: 40
+    inaccuracy: 5
+    velocityRnd: 0.12
+    shootSound: shootMissileSmall
+    shoot: {
+      type: ShootPattern
+      shots: 2
+      shotDelay: 5
+    }
+    bullet: {
+      type: MissileBulletType
+      speed: 5
+      damage: 55
+      splashDamage: 120
+      splashDamageRadius: 44
+      lifetime: 80
+      homingPower: 0.14
+      homingRange: 220
+      collidesAir: true
+      width: 16
+      height: 25
+      backColor: 34d781
+      frontColor: ffffff
+      trailColor: 7bfba9
+      trailLength: 12
+      trailWidth: 2
+      status: ew-jam
+      statusDuration: 180
+      buildingDamageMultiplier: 0.5
+      shootEffect: none
+      smokeEffect: none
+      hitEffect: hitLancer
+      despawnEffect: hitLancer
+    }
+  }
+  {
+    name: vesper-missile
+    x: 21
+    y: 51.4
+    mirror: true
+    alternate: true
+    rotate: false
+    reload: 90
+    recoil: 0
+    shootCone: 40
+    inaccuracy: 5
+    velocityRnd: 0.12
+    shootSound: none
+    chargeSound: none
+    shoot: {
+      type: ShootPattern
+      shots: 2
+      firstShotDelay: 10
+      shotDelay: 5
+    }
+    bullet: {
+      type: MissileBulletType
+      speed: 5
+      damage: 55
+      splashDamage: 120
+      splashDamageRadius: 44
+      lifetime: 80
+      homingPower: 0.14
+      homingRange: 220
+      collidesAir: true
+      width: 16
+      height: 25
+      backColor: 34d781
+      frontColor: ffffff
+      trailColor: 7bfba9
+      trailLength: 12
+      trailWidth: 2
+      status: ew-jam
+      statusDuration: 180
+      buildingDamageMultiplier: 0.5
+      shootEffect: none
+      smokeEffect: none
+      hitEffect: hitLancer
+      despawnEffect: hitLancer
+    }
+  }
+  {
+    name: vesper-missile
+    x: 21
+    y: 51.4
+    mirror: true
+    alternate: true
+    rotate: false
+    reload: 90
+    recoil: 0
+    shootCone: 40
+    inaccuracy: 5
+    velocityRnd: 0.12
+    shootSound: shootMissileSmall
+    shoot: {
+      type: ShootPattern
+      shots: 2
+      firstShotDelay: 20
+      shotDelay: 5
+    }
+    bullet: {
+      type: MissileBulletType
+      speed: 5
+      damage: 55
+      splashDamage: 120
+      splashDamageRadius: 44
+      lifetime: 80
+      homingPower: 0.14
+      homingRange: 220
+      collidesAir: true
+      width: 16
+      height: 25
+      backColor: 34d781
+      frontColor: ffffff
+      trailColor: 7bfba9
+      trailLength: 12
+      trailWidth: 2
+      status: ew-jam
+      statusDuration: 180
+      buildingDamageMultiplier: 0.5
+      shootEffect: none
+      smokeEffect: none
+      hitEffect: hitLancer
+      despawnEffect: hitLancer
+    }
+  }
+  {
+    name: vesper-silo
+    x: 21
+    y: 51.4
+    mirror: true
+    alternate: true
+    rotate: false
+    reload: 90
+    recoil: 0
+    shoot: {
+      type: ShootPattern
+      shots: 2
+      shotDelay: 10
+    }
+    shootCone: 360
+    shootSound: shootMissileLarge
+    buildingDamageMultiplier: 0.4
+    bullet: {
+      shootEffect: {
+        type: ParticleEffect
+        particles: 8
+        line: true
+        buildingDamageMultiplier: 0.4
+        length: 24
+        lifetime: 18
+        strokeFrom: 1.6
+        strokeTo: 0
+        lenFrom: 7
+        lenTo: 1
+        colorFrom: ffffff
+        colorTo: d7f08b
+        lightOpacity: 0
+      }
+      smokeEffect: none
+      speed: 0
+      keepVelocity: false
+      collidesAir: false
+      spawnUnit: solace-missile
+    }
+  }
 ]
-range: 380
+
+range: 430
+
 abilities: [
   {
     type: EnergyFieldAbility
-    statusDuration: 300
     maxTargets: 35
-    damage: 64
+    damage: 30
     range: 345
     color: d7f08b
-    reload: 40
-    healPercent: 1.5
-    sameTypeHealMult: 0.512
-    status: ew-jam
+    reload: 30
+    healPercent: 1
+    sameTypeHealMult: 0.256
+    status: ew-jam-weak
     statusDuration: 180
     sectors: 6
     x: -0.12
@@ -227,12 +459,13 @@ abilities: [
   }
   {
     type: EnergyFieldAbility
-    statusDuration: 300
     maxTargets: 32
-    damage: 64
+    damage: 30
     range: 355
     color: d7f08b
-    reload: 40
+    reload: 30
+    healPercent: 1
+    sameTypeHealMult: 0.256
     status: ew-jam
     statusDuration: 180
     sectors: 6
@@ -242,20 +475,20 @@ abilities: [
   {
     type: ForceFieldAbility
     radius: 200
-    max: 16384
-    regen: 5
+    max: 16000
+    regen: 5.225
     cooldown: 1110
     sides: 6
   }
   {
     type: EnergyFieldAbility
-    reload: 40
+    reload: 30
     range: 350
-    damage: 32
+    damage: 40
     maxTargets: 64
     hitBuildings: false
     status: ew-jam-heavy
-    statusDuration: 240
+    statusDuration: 30
     healPercent: 0
     displayHeal: true
     color: 6fe44d
@@ -288,6 +521,9 @@ abilities: [
     effectColor: 34d78190
   }
 ]
+
 research: {
   parent: solace
 }
+
+fogRadius: 44
