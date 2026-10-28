@@ -1,0 +1,19 @@
+type: Wall
+armor:1
+color: 5e50df
+name: Silicon wall
+health:1420
+size:2
+requirements:[
+    silicon/24
+]
+category:defense
+research: {
+  parent: beryllium-wall-large
+    objectives: [
+      {
+      type: OnSector
+      preset: ArkyWar
+        }
+]
+            }   
