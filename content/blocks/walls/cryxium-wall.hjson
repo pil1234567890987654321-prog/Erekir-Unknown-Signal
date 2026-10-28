@@ -1,30 +1,33 @@
 type: ShieldWall
-shieldHealth:1350
-regenSpeed:1.55
-breakCooldown:800
+shieldHealth:2350
+regenSpeed:4
+breakCooldown:540
 glowColor:308aff
 glowMag:6
 glowScl:25
-armor:19
+armor:27
 consumes:{
-    power:0.225
+    power:0.3
 }
 color: 5e50df
 name: Cryxium Wall
-health:4650
+health:5650
 size:2
+buildTime:450
 lightningChance:0.025
 lightningDamage:225
 lightningLength:45
 lightningColor:70e4e6
 flashHit:true
+absorbLasers: true
 flashColor:308aff
 conductivePower: true
 connectedPower: true
 requirements:[
     cryxium/24
-    carbide/8
+    carbide/16
     phase-fabric/12
+    surge-alloy/12
 ]
 category:defense
 research: {
