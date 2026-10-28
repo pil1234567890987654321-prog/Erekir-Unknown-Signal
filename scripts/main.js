@@ -1,10 +1,12 @@
 // Erekir: Unknown Signal
-// Intro sequence
+// Intro sequence :)
+
 var introSound = Vars.tree.loadSound("intro");
 require("solace");
 require("prism");
 require("vesper");
-print("🤪🤪🤪🤪🤪🤪Solace script test🤪🤪🤪🤪🤪🤪");
+require("siliwall");
+//print("🤪🤪🤪🤪🤪🤪Solace script test🤪🤪🤪🤪🤪🤪");
 var introStarted = false;
 var introFinished = false;
 
