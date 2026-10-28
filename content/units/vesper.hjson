@@ -126,6 +126,7 @@ weapons: [
     shootCone: 360
     reload: 30
     recoil: 0
+    buildingDamageMultiplier:0.25
     alwaysContinuous: true
     shootSound: beamMeltdown
     shootSoundVolume: 2
@@ -133,8 +134,10 @@ weapons: [
     linearWarmup: true
     shootWarmupSpeed: 0.02
     minWarmup: 0.999
+    armorMultiplier: 2
     bullet: {
       type: ContinuousLaserBulletType
+      armorMultiplier: 2
       damage: 51.2
       damageInterval: 3
       length: 430
@@ -142,8 +145,7 @@ weapons: [
       lifetime: 20
       fadeTime: 16
       largeHit: true
-      collidesAir: true
-      pierceArmor: true
+      collidesAir: 
       shake: 2.2
       hitEffect: hitMeltdown
       despawnEffect: none
@@ -152,7 +154,7 @@ weapons: [
       incendChance: 0
       status: overheating
       statusDuration: 180
-      buildingDamageMultiplier: 0.85
+      buildingDamageMultiplier: 0.35
       colors: [34d78155, 34d781aa, 7bfba9, ffffff]
     }
   }
@@ -198,7 +200,6 @@ weapons: [
         collidesAir: true
         collidesGround: true
         hittable: false
-        pierceArmor: true
         status: ew-jam-heavy
         statusDuration: 180
         hitEffect: hitLancer
@@ -219,6 +220,8 @@ weapons: [
     shootCone: 1
     reload: 300
     recoil: 0
+    buildingDamageMultiplier:0.4
+    armorMultiplier: 4
     status:unmoving
     statusDuration:150
     chargeSound: chargeCorvus
@@ -232,6 +235,7 @@ weapons: [
       type: LaserBulletType
       damage: 750
       length: 520
+      armorMultiplier: 4
       width: 40
       lifetime: 90
       collidesAir: true
